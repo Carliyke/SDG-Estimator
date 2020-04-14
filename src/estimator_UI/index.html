@@ -40,8 +40,8 @@
     <!-- NAVSECTION -->
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" style="background: black !important;">
-      <a class="navbar-brand" href="#">Covid-19 Estimator</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <b class="navbar-brand ecnx-logo ml-sm-1 ml-md-5"><img class="img-fluid" id="logo" src="images/redcross.png" style="width: 10%; height: 10%;"><a class="navbar-brand font-weight-bold lead text-warning ml-2" href="#"> Covid-19 Estimator</a></b>   
+      <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
@@ -99,7 +99,7 @@
 
           <hr class="ml-4 d-sm-none" style="height:1px;border:none;color:#333;background-color:#333;" />
 
-          <p class="font-weight-light ml-3 d-sm-none company"> &copy; Copyright 2019 Covid-19_Estimator. Powered by Andela/Facebook_Developer_circle</p>
+          <p class="font-weight-light ml-3 d-sm-none company"> © <script>document.write(new Date().getFullYear())</script> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</p>
           
         </ul>
         
@@ -113,7 +113,7 @@
   <!-- FORM -->
   
   <div class="container py-5">
-    <h4 class="display-5 py-3 text-center">Input Data For Estimation</h4>
+    <p class="lead font-weight-bold py-3 text-center text-info">Input Data For Estimation</p>
     <form class="bg-grey" action="../estimator.php" method="post">
       <div class="form-row">
 
@@ -143,8 +143,8 @@
         
       </div>
 
-      <div class="form-row text-center">
-        <div class="form-group offset-md-3 col-md-6">
+      <div class="form-row text-md-center text-xs-left py-md-3 py-xs-0">
+        <div class="form-group col-md-2 mx-auto">
           <label for="inputPeriodType4">Period Type</label>
           <select id="inputPeriodType4" class="form-control" data-period-type="">
             <option selected>Days</option>
@@ -154,8 +154,8 @@
         </div>
       </div>
 
-      <div class="col-md-12 text-center">
-        <button type="submit" class="btn btn-primary mx-auto" data-go-
+      <div class="col-md-12 text-center py-3">
+        <button type="submit" class="btn btn-primary font-weight-bold mx-auto" data-go-
         estimate="">Estimate</button>
       </div>
 
@@ -210,7 +210,7 @@
   
      <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© <script>document.write(new Date().getFullYear())</script> Copyright:
-      <a href="http://Covid-19_Estimator.com"> Covid-19 Estimator.com</a>
+      <a href="http://Covid-19_Estimator.com"> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</a>
     </div>
     <!-- Copyright -->
   
@@ -241,7 +241,7 @@
    <!-- JAVASCRIPT -->
   <script type="text/javascript">
     
-    
+
 
   </script>
 
