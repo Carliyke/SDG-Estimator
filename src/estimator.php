@@ -14,14 +14,14 @@ function covid19ImpactEstimator($data)
 
   $dataString = json_encode($data);
 
-  $input = json_decode($dataString);
+  $data = json_decode($dataString);
 
   $impact = array();
 
   $severeImpact = array();
 
   // Estimated number of currently infected.
-  $currentlyInfected = ($input['reportedCases'] * 10);
+  $currentlyInfected = ($data['reportedCases'] * 10);
 
 
   $infectionsByRequestedTime = ($currentlyInfected * 512);
@@ -47,7 +47,7 @@ function covid19ImpactEstimator($data)
   // Estimated number of severe positive cases that will require ventilators.
   $casesForVentilatorsByRequestedTime = ($infectionsByRequestedTime * 0.02);
 
-  $avgDailyIncomeInUSD = $input['region']['avgDailyIncomeInUSD'];
+  $avgDailyIncomeInUSD = $data['region']['avgDailyIncomeInUSD'];
 
   // Estimated amount of money the economy is likely to lose daily.
   $dollarsInFlight = round(($infectionsByRequestedTime * $avgDailyIncomeInUSD) / 30);
@@ -59,7 +59,7 @@ function covid19ImpactEstimator($data)
 
   $severeImpact = array_map("multiplyByFive", $severeImpact);
 
-  $data['input'] = $input;
+  $data['data'] = $data;
   $data['impact'] = $impact;
   $data['severeImpact'] = $severeImpact;
 
