@@ -12,7 +12,9 @@ function multiplyByFive($value)
 function covid19ImpactEstimator($data)
 {
 
-  $input = json_decode($data, true);
+  $dataString = json_encode($data);
+
+  $input = json_decode($dataString);
 
   $impact = array();
 
