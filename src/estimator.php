@@ -31,7 +31,7 @@ function covid19ImpactEstimator($data)
   $severeCasesByRequestedTime = ($infectionsByRequestedTime * 0.15);
 
 
-  $totalHospitalBeds = $input['totalHospitalBeds'];
+  $totalHospitalBeds = $data['totalHospitalBeds'];
 
 
   /* Estimated number of available hospital beds for available cases 
