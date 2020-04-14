@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
+  <!-- Your custom styles -->
   <link rel="stylesheet" href="css/style.css">
 
   
@@ -40,7 +40,10 @@
     <!-- NAVSECTION -->
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" style="background: black !important;">
-      <b class="navbar-brand ecnx-logo ml-sm-1 ml-md-5"><img class="img-fluid" id="logo" src="images/redcross.png" style="width: 10%; height: 10%;"><a class="navbar-brand font-weight-bold lead text-warning ml-2" href="#"> Covid-19 Estimator</a></b>   
+      <b class="navbar-brand ecnx-logo ml-sm-1 ml-md-5">
+        <img class="img-fluid" id="logo" src="images/redcross.png" style="width: 10%; height: 10%;">
+        <a class="navbar-brand font-weight-bold lead text-warning ml-2" href="#"> Covid-19 Estimator</a>
+      </b>   
       <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,7 +60,7 @@
             </a>
           </li>
     
-          <p class="font-weight-bold mt-3 mb-1 ml-3 d-sm-none">What We Stand For</p>
+          <p class="font-weight-bold mt-3 mb-1 ml-3 d-sm-none text-muted">What We Stand For</p>
 
           <li class="nav-item mx-3 d-sm-none">
             <!-- Button trigger modal -->
@@ -91,15 +94,16 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Partners
             </a>
-            <div class="dropdown-menu dropdown-primary mt-sm-0 mt-md-3" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://andela.com/">Andela</a>
-              <a class="dropdown-item" href="https://developers.facebook.com/developercircles/">Facebook</a>
+            <div class="dropdown-menu dropdown-primary text-center" aria-labelledby="navbarDropdown" style="border: 2px solid black !important">
+              <a class="dropdown-item font-weight-bold py-0" href="https://andela.com/">Andela</a>
+              <hr class="d-sm-none" style="height:1px;border:none;color:#333;background-color:#333;"/>
+              <a class="dropdown-item font-weight-bold py-0" href="https://developers.facebook.com/developercircles/">Facebook</a>
             </div>
           </li>
 
           <hr class="ml-4 d-sm-none" style="height:1px;border:none;color:#333;background-color:#333;" />
 
-          <p class="font-weight-light ml-3 d-sm-none company"> © <script>document.write(new Date().getFullYear())</script> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</p>
+          <p class="font-weight-light ml-3 d-sm-none company text-muted"> © <script>document.write(new Date().getFullYear())</script> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</p>
           
         </ul>
         
@@ -113,17 +117,17 @@
   <!-- FORM -->
   
   <div class="container py-5">
-    <p class="lead font-weight-bold py-3 text-center text-info">Input Data For Estimation</p>
+    <h4 class="font-weight-bold display-5 pt-3 pb-5 text-center text-info">Input Data For Estimation</h4>
     <form class="bg-grey" action="../estimator.php" method="post">
       <div class="form-row">
 
         <div class="form-group col-md-6">
-          <label for="inputPopulation4">Population</label>
+          <label class="lead" for="inputPopulation4">Population</label>
           <input type="number" class="form-control" data-population="" id="inputPopulation4">
         </div>
 
         <div class="form-group col-md-6">
-          <label for="inputTimeToElapse4">Time To Elapse</label>
+          <label class="lead" for="inputTimeToElapse4">Time To Elapse</label>
           <input type="number" class="form-control" data-time-to-elapse="" id="inputPassword4">
         </div>
 
@@ -132,12 +136,12 @@
       <div class="form-row">
 
         <div class="form-group col-md-6">
-          <label for="inputReportedCases4">Reported Cases</label>
+          <label class="lead" for="inputReportedCases4">Reported Cases</label>
           <input type="number" class="form-control" data-reported-cases="" id="inputPopulation4">
         </div>
 
         <div class="form-group col-md-6">
-          <label for="inputTotalHospitalBeds4">Total Hospital Beds</label>
+          <label class="lead" for="inputTotalHospitalBeds4">Total Hospital Beds</label>
           <input type="number" class="form-control" data-total-hospital-beds="" id="inputPassword4">
         </div>
         
@@ -145,7 +149,7 @@
 
       <div class="form-row text-md-center text-xs-left py-md-3 py-xs-0">
         <div class="form-group col-md-2 mx-auto">
-          <label for="inputPeriodType4">Period Type</label>
+          <label class="lead" for="inputPeriodType4">Period Type</label>
           <select id="inputPeriodType4" class="form-control" data-period-type="">
             <option selected>Days</option>
             <option>Weeks</option>
@@ -178,23 +182,23 @@
           <div class="mb-5 flex-center">
   
             <!-- Facebook -->
-            <a href="https://web.facebook.com/Cryptoratty" class="fb-ic">
+            <a href="https://web.facebook.com/Cryptoratty" class="fb-ic set">
               <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!-- Twitter -->
-            <a href="https://mobile.twitter.com/Carliyke" class="tw-ic">
+            <a href="https://mobile.twitter.com/Carliyke" class="tw-ic set">
               <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!--Github-->
-            <a href="https://github.com/Carliyke" class="git-ic">
+            <a href="https://github.com/Carliyke" class="git-ic set">
               <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
   
             <!--Linkedin -->
-            <a href="https://www.linkedin.com/in/ikenna-uwakwe/" class="li-ic">
+            <a href="https://www.linkedin.com/in/ikenna-uwakwe/" class="li-ic set">
               <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
-            <a href="ikennauwakwe@gmail.com" class="email-ic">
+            <a href="ikennauwakwe@gmail.com" class="email-ic set">
               <i class="fa fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
           
@@ -210,7 +214,7 @@
   
      <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© <script>document.write(new Date().getFullYear())</script> Copyright:
-      <a href="http://Covid-19_Estimator.com"> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</a>
+      <a class="text-muted" href="http://Covid-19_Estimator.com"> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle.</a>
     </div>
     <!-- Copyright -->
   
