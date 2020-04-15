@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Covid-19 Estimator</title>
+
+  <link rel="stylesheet" type="text/css" href="css/lawmdb.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
+
+  <!-- Fnte Awesome CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+  <!-- MDB-->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <!-- NAVSECTION -->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" style="background: black !important;">
+      <b class="navbar-brand ecnx-logo ml-sm-1 ml-md-5">
+        <img class="img-fluid" id="logo" src="images/redcross.png" style="width: 10%; height: 10%;">
+        <a class="navbar-brand font-weight-bold lead text-warning ml-2" href="#"> Covid-19 Estimator</a>
+      </b>   
+      <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-3 border-left">
+    
+          <li class="nav-item ml-0 mr-3 active">
+            <a class="nav-link font-weight-bold likedrop" href="#">
+              <span class="mr-1">
+                <i class="fas fa-lg fa-home"></i>
+              </span>
+              Home<span class="sr-only">(current)</span>
+            </a>
+          </li>
+    
+          <p class="font-weight-bold mt-3 mb-1 ml-3 d-sm-none text-muted">What We Stand For</p>
+
+          <li class="nav-item mx-3 d-sm-none">
+            <!-- Button trigger modal -->
+            <button type="button" class="nav-link btn btn-dark" data-toggle="modal" data-target="#aboutModal">
+              About This Project
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Project Description</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    This is an eligibility assessment for the 2020 [#BuildforSDG](https://buildforsdg.andela.com/) program.
+
+                    The assessment empowers me to **attempt** helping society and leaders prepare for the **real big problem** of COVID-19, which is **its impact on lives, health systems, supply chains, and the economy**: 
+                    > 1.  Too many patients, not enough hospitals and beds. A serious shortage of ventilators, masks and other PPE - if *we don’t practice social distancing*.
+                    > 2.  Job losses or freezes, low cash flow and low production (even for essentials like food). These and more from too many people being sick, a sizable number dying (including some of the best people in many fields), and many others affected by the impact of losing loved ones or a world operating in slow motion.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </li>
+
+          <li class="nav-item mx-3 d-sm-none">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Partners
+            </a>
+            <div class="dropdown-menu dropdown-primary text-center" aria-labelledby="navbarDropdown" style="border: 2px solid black !important">
+              <a class="dropdown-item font-weight-bold py-0" href="https://andela.com/">Andela</a>
+              <hr class="d-sm-none" style="height:1px;border:none;color:#333;background-color:#333;"/>
+              <a class="dropdown-item font-weight-bold py-0" href="https://developers.facebook.com/developercircles/">Facebook</a>
+            </div>
+          </li>
+
+          <hr class="ml-4 d-sm-none" style="height:1px;border:none;color:#333;background-color:#333;" />
+
+          <p class="font-weight-light ml-3 d-sm-none company text-muted"> © <script>document.write(new Date().getFullYear())</script> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle</p>
+          
+        </ul>
+        
+      </div>
+    </nav>
+
+    <!-- END OF NAVSECTION -->
+
+  </header>
+
+  <!-- FORM -->
+  
+  <div class="container py-5">
+    <h4 class="font-weight-bold display-5 pt-3 pb-5 text-center text-info">Input Data For Estimation</h4>
+    <form class="bg-grey" action="../estimator.php" method="post">
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label class="lead" for="inputPopulation4">Population</label>
+          <input type="number" class="form-control" data-population="" id="inputPopulation4">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label class="lead" for="inputTimeToElapse4">Time To Elapse</label>
+          <input type="number" class="form-control" data-time-to-elapse="" id="inputPassword4">
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label class="lead" for="inputReportedCases4">Reported Cases</label>
+          <input type="number" class="form-control" data-reported-cases="" id="inputPopulation4">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label class="lead" for="inputTotalHospitalBeds4">Total Hospital Beds</label>
+          <input type="number" class="form-control" data-total-hospital-beds="" id="inputPassword4">
+        </div>
+        
+      </div>
+
+      <div class="form-row text-md-center text-xs-left py-md-3 py-xs-0">
+        <div class="form-group col-md-2 mx-auto">
+          <label class="lead" for="inputPeriodType4">Period Type</label>
+          <select id="inputPeriodType4" class="form-control" data-period-type="">
+            <option selected>Days</option>
+            <option>Weeks</option>
+            <option>Months</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-12 text-center py-3">
+        <button type="submit" class="btn btn-primary font-weight-bold mx-auto" data-go-
+        estimate="">Estimate</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- /FORM -->
+
+  <!-- FOOTER -->
+  <footer class="page-footer font-small black darken-3 pt-5">
+
+    <!-- Footer Elements -->
+    <div class="container" style="background: #03131f !important">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a href="https://web.facebook.com/Cryptoratty" class="fb-ic set">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a href="https://mobile.twitter.com/Carliyke" class="tw-ic set">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Github-->
+            <a href="https://github.com/Carliyke" class="git-ic set">
+              <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+  
+            <!--Linkedin -->
+            <a href="https://www.linkedin.com/in/ikenna-uwakwe/" class="li-ic set">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a href="ikennauwakwe@gmail.com" class="email-ic set">
+              <i class="fa fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+          
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+     <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© <script>document.write(new Date().getFullYear())</script> Copyright:
+      <a class="text-muted" href="http://Covid-19_Estimator.com"> Covid-19 Estimator. &nbsp; | &nbsp; Powered by Andela & Facebook Developer Circle.</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  
+  <div class="trademark bg-danger text-center py-3 d-sm-none px-sm-4 px-md-0">
+    <a href="tel:+2348164002946" class="text-light"><i class="fa fa-phone-square fa-1x" aria-hidden="true">
+      </i> <span class="font-weight-light">Place a Call: +234 816 400-2946</span>
+    </a>
+  </div>
+
+  <!-- END OF FOOTER -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"src="js/lawmdb.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+   <!-- JAVASCRIPT -->
+  <script type="text/javascript">
+    
+
+
+  </script>
+
+
+</body>
+</html>

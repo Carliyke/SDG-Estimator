@@ -1,0 +1,85 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500&display=swap";
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
+ body {
+ 	font-family: 'Poppins', sans-serif !important;
+ }
+
+
+.ecnx-logo {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.ecnx-logo:hover {
+	transform: scale(1.13);
+	transition: transform .2s ease-in-out;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #232a5c !important;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(35, 42, 92)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.company {
+	font-size: .8em !important;
+}
+
+
+.set:hover {
+	color: #232a5c;
+	transform: scale(1.03);
+	z-index: 99;
+	transition: transform .5s ease-in-out;
+}
+
+
+.hrln {
+    border: 0; 
+    border-top: 1px solid rgb(110, 320, 179, .4) !important;
+}
+
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+	/*large screen*/
+@media only screen and (min-width: 1176px) {
+
+}
+
+    /* tablets and desktop */
+@media only screen and (min-width: 768px) {
+	.likedrop {
+	  	white-space: nowrap !important;
+	}
+
+}
+
+    /* phones */
+@media only screen and (max-width: 767px) {
+
+	.dropdown-menu {
+	border: .5px solid black !important;
+	background: #232a5c;
+}
+
+}
+
+	/* portrait phones */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    
+}
